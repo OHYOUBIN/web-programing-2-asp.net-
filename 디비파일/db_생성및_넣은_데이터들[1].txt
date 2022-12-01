@@ -1,0 +1,128 @@
+---------------------------------------------책 db -----------------------------------
+
+
+Create table Bookdb
+(
+Bookname varchar(40),
+author VARCHAR(40),
+Bookid int NOT NULL,
+borrow VARCHAR(40),
+
+
+
+PRIMARY KEY(Bookid)
+)
+
+
+
+
+
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('트렌드 코리아 2023','김난도',00001,'exist');
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('역행자','자청',00002,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('Stick 스틱!','칩 히스',00003,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('이 책은 돈 버는 법에 관한 이야기','고명환',00004,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('자이언트 임팩트','박종훈',00005,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('아파트 투자는 사이클이다','이현철',00006,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('돈의 속성','김승호',00007,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('부자 아빠 가난한 아빠 1','로버트 기요사키',00008,'exist');
+
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('나의 월급 독립 프로젝트','유목민',00009,'exist');
+
+insert into Bookdb(Bookname,author,Bookid,borrow)
+values('유난한 도전','정경화',00010,'exist');
+
+
+
+----------------------------------------관리자 db-----------------------------------------
+
+
+
+
+create table Admindb
+(
+name VARCHAR(40) NOT NULL,
+id VARCHAR(40) NOT NULL,
+password VARCHAR(40) NOT NULL,
+
+primary key(id)
+)
+
+INSERT INTO 
+Admindb (name,id,password)
+values
+('이정민',20192649,2019);
+
+INSERT INTO 
+Admindb (name,id,password)
+values
+('오유빈',20211684,2021);
+
+INSERT INTO 
+Admindb (name,id,password)
+values
+('박정완',20222113,2022);
+
+INSERT INTO 
+Admindb (name,id,password)
+values
+('성민준',20222084,2022);
+
+
+--------------------------------------------유저 db------------------------------------------
+create table LIbraryuserdb
+
+(
+name VARCHAR(40), NOT NULL,
+
+phonenumber VARCHAR(40), NOT NULL,
+
+email VARCHAR(40), NOT NULL,
+
+id VARCHAR(40), NOT NULL,
+
+password VARCHAR(40), NOT NULL,
+
+primary key(id)
+)
+
+
+
+--------------------------------------------대출 확인 db ------------------------------------------------
+
+create table Loanstatus
+(
+luserid varchar(50) NOT NULL,
+Booksname varchar(50) NOT NULL,
+deadline varchar(50) NOT NULL,
+
+Primary key (luserid)
+)
+
+
+
+
